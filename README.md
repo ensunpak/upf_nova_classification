@@ -37,8 +37,15 @@ Challenges in the project:
 
 ## 4. Project details
 ### 4.1 Large dataset
-The original data source in tab-delimited format (TSV) taken from world.openfoodfacts.org was 8GB in size making it hard to process with the MacBook Pro used in this project. The dataset had to be first split into 15 smaller files in the terminal, then each smaller file was read into memory in sequence and then appended into a Pandas dataframe for subsequent use.
+The original data source in tab-delimited format (TSV) taken from world.openfoodfacts.org was 8GB in size making it hard to process with the MacBook Pro used in this project. The dataset had to be first split into 15 smaller files in the terminal (command below), then each smaller file was read into memory in sequence and then appended into a Pandas dataframe for subsequent use.
 
-<insert terminal code to split file>
-
+```terminal
+split -l 200000 en.openfoodfacts.org.products.csv data_
+```
 Link to data source [here](https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv).
+
+### 4.2 Initial EDA
+The initial dataset has 577,084 records with 142 columns of information. As the volume of data to work with is massive, the opportunity to reduce the size of the data will be taken advantage of in this project.
+
+The first thing that was observed is that 15 countries make up about 90% of the records in the data, the remaining 10% of data that covers the rest of the countries were excluded. The following chart illustrates the distribution of data by countries where the product data was reported.
+
