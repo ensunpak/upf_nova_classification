@@ -63,3 +63,24 @@ From reviewing the composition of Nutri-Score grades, it is also alarming to obs
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nutriscore_grade.png" width="500"> <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nutriscore_grade_pie.png" width="320">
 
+The Nutri-Score scores interestingly form a bi-modal distribution as can be seen in the following plot.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nutriscore_score_hist.png" width="1000">
+
+Zooming into the top 5 countries’ NOVA group composition, all 5 countries have the highest food product in the ultra-processed NOVA group (Group 4), with the United States being the largest and Italy being the smallest. However, the United States also has the most product classified under Group 1which is the unprocessed food product group.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_top5_NOVA_group.png" width="700">
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_top5_NOVA_group_pct.png" width="700">
+
+Nutri-Score grades show a similar trend to the NOVA group, where most of the top 5 countries reviewed had food products classified under the worse end of the Nutri-Score classification (i.e., grades D and E).
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_top5_nutriscore_grade.png" width="700">
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_top5_nutriscore_grade_pct.png" width="700">
+
+An analysis of the correlation between Nutri-Score grading and NOVA grouping reveals some proportionate correlation between the two systems. Lower and safer NOVA grouping tends to have a larger number of food products with better Nutri-Score grades, the converse is true: Worst NOVA grouping tends to have a major proportion of food products with very poor Nutri-Score grades.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_NOVA_by_nutriscore_grade.png" width="700">
+
+This can be seen clearer in the following chart displaying the percentage composition of each Nutri-Score grade within each NOVA group.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_NOVA_by_nutrigrade_pct.png" width="700">
