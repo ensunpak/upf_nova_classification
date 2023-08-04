@@ -125,3 +125,34 @@ To classify the food product in the NOVA groups based on the food product’s fe
 5.	Neural network logistic regression (single layer, SoftMax)
 
 These models will be trained through cross-validation with 5 K-Folds on both the full dataset (with an imbalanced label) and the down-sampled dataset (with a balanced label) to observe the effect imbalanced labels have on model performance. The neural network model will be trained similarly on both datasets for a maximum of 100 epochs. In addition, different gradient descent optimizers will also be explored at a learning rate of 0.001 such as Stochastic Gradient Descent (SGD), Adam, and Adagrad.
+
+### 5.1 Model performance
+The models were trained and the 5-fold cross-validated accuracy metric of their performance is recorded in the table below:
+
+| ML Algorithm | Full dataset (1) | Down-sampled dataset (2) | Accuracy difference (1) vs (2) | Training speed (Fast/Moderate/Slow) | 
+| ------------ | :--------------: | :----------------------: | :----------------------------: | :---------------------------------: |
+| Logistic regression (LBFGS) | 75.54% | 79.98% | -4.44% | Slow |
+| Decision tree | 85.45% | 84.11% | +1.34% | Fast |
+| Random forest | 89.31% | 88.59% | +0.72% | Moderate |
+| XGBoost | 85.50% | 88.14% | -2.64% | Moderate |
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_model_performance_cv_full.png" width="900">
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_model_performance_cv_downsampled.png" width="900">
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_model_performance_cv_avg_full.png" width="550">
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_model_performance_cv_avg_downsample.png" width="550">
+
+Single layer neural network: neurons = 4; layer activation = SoftMax; epochs = 100; optimizer learning rate = 0.001; momentum = 0.005 (for SGD)
+| Optimizer | Train accuracy (Full dataset | Validation accuracy (Full dataset) | Train accuracy (Down sample dataset) | Validation accuracy (Down sample dataset) | 
+| ------------ | :--------------: | :----------------------: | :----------------------------: | :---------------------------------: |
+| SGD | 67.78% | 67.66% | 55.60% | 55.93% |
+| Adam | 73.34% | 73.32% | 77.41% | 77.38% |
+| Adagrad |74.11% | 74.13% | 73.32% | 73.13% |
+| Adagrad (With L2 regularization) | 71.71% | 71.69% | 75.88% | 75.90% |
+
+Model Performance - SGD optimizer (full dataset)
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_sgd_full.png" width="800">
+
+Model Performance - Adam optimizer
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_adam_full.png" width="800">
