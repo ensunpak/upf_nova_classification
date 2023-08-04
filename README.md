@@ -153,6 +153,6 @@ Model Performance - SGD optimizer (full dataset)
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_sgd_full.png" width="800">
 
-Model Performance - Adam optimizer
+Model Performance - Adam optimizer (full dataset)
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_adam_full.png" width="800">
