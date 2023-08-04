@@ -84,3 +84,34 @@ An analysis of the correlation between Nutri-Score grading and NOVA grouping rev
 This can be seen clearer in the following chart displaying the percentage composition of each Nutri-Score grade within each NOVA group.
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_NOVA_by_nutrigrade_pct.png" width="700">
+
+### 4.3 Feature engineering
+Out of the many features identified, two features contained a list of values that could be extracted to form new features. These are the additives and ingredients features for each food product. Each feature contains a list of additives and ingredients used in a product specifically. These were extracted and each unique additive and ingredient then become new features to describe the NOVA group assigned to the particular food product. The new set of additive features would be structured similarly to one-hot-encoding, where each new additive feature would contain a binary value of 1 or 0, whether that particular additive compound is present in the food product or not.
+
+The ingredients feature had to be excluded from the analysis because there were 356,210 unique ingredients or features that were too large to be of practical value during model development. 
+
+### 4.4 Features with high dimensions
+Two features were engineered which resulted in a new number of features:
+
+Ingredients: From one feature to 356,210 features
+Additives: From one feature to 512
+
+As mentioned earlier, the new  set of features engineered from ingredients was too large and was discarded. To reduce complexity in model development, the number of new features derived from the original additive feature was reduced using PCA. From 512 new additive features, PCA revealed that only 120 features were needed as these were able to explain 95% of the variability in the feature set. While performing PCA, the features were not standardized as they were binary values so they would not affect the outcome of the PCA.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_PCA_full_dataset.png" width="700">
+
+Similarly in the down-sampled dataset, the new set of additive features was also reduced using PCA. 378 unique additive features were reduced to 117.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_PCA_downsampled_dataset.png" width="700">
+
+### 4.5 Imbalanced labels in dataset
+The reduced dataset with the top 15 countries exhibited an imbalance in the label which is the NOVA grades. To address this, a version of the dataset will be randomly down-sampled to ensure that the composition of the labels is equal in the dataset.
+
+| NOVA Group | Records | Records (%) |
+| ---------- | ------- | ----------- |
+| 1          | 59,233  | 10%         |
+| 2          | 22,187  | 10%         |
+| 3          | 116,627 | 10%         |
+| 4          | 316,684 | 10%         |
+
+The population in NOVA Groups 1, 3, and 4 will be randomly down-sampled close to NOVA Group 2 at 22,000 samples. The sampling was performed without any replacement.
