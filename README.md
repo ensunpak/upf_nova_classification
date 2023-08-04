@@ -47,5 +47,19 @@ Link to data source [here](https://static.openfoodfacts.org/data/en.openfoodfact
 ### 4.2 Initial EDA
 The initial dataset has 577,084 records with 142 columns of information. As the volume of data to work with is massive, the opportunity to reduce the size of the data will be taken advantage of in this project.
 
-The first thing that was observed is that 15 countries make up about 90% of the records in the data, the remaining 10% of data that covers the rest of the countries were excluded. The following chart illustrates the distribution of data by countries where the product data was reported.
+The first observation is that 15 countries make up about 90% of the records in the data, the remaining 10% of data that covers the rest of the countries were excluded. The following chart illustrates the distribution of data by countries where the product data was reported.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_top15_country.png" width="800">
+
+⚠️ For the rest of the EDA task, the insights obtained are from a reduced dataset with only the top 15 countries.
+
+Next, the composition of the NOVA group is examined. The following plots visualize this.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_NOVA_groups.png" width="500"> <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_NOVA_pie.png" width="320">
+
+Alarmingly, most food products reported fall in NOVA groups 3 and 4 which denotes high to ultra-processed foods.
+
+From reviewing the composition of Nutri-Score grades, it is also alarming to observe that most food products fall in the worst end of the grading system that is, grades C, D, and E.
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nutriscore_grade.png" width="500"> <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nutriscore_grade_pie.png" width="320">
 
