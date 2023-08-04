@@ -104,7 +104,7 @@ Similarly in the down-sampled dataset, the new set of additive features was also
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_PCA_downsampled_dataset.png" width="700">
 
-### 4.5 Imbalanced labels in dataset
+### 4.5 Imbalanced labels in the dataset
 The reduced dataset with the top 15 countries exhibited an imbalance in the label which is the NOVA grades. To address this, a version of the dataset will be randomly down-sampled to ensure that the composition of the labels is equal in the dataset.
 
 | NOVA Group | Records | Records (%) |
@@ -115,3 +115,13 @@ The reduced dataset with the top 15 countries exhibited an imbalance in the labe
 | 4          | 316,684 | 10%         |
 
 The population in NOVA Groups 1, 3, and 4 will be randomly down-sampled close to NOVA Group 2 at 22,000 samples. The sampling was performed without any replacement.
+
+## 5. Classification models
+To classify the food product in the NOVA groups based on the food product’s features such as its ingredients, additive compounds, Nutri-Score grade and score as well as energy values, the following out-of-the-box machine learning algorithms were selected for this project:
+1.	Logistic regression (Minimizer = LBFGS)
+2.	Decision tree classifier
+3.	Random forest classifier
+4.	XGBoost
+5.	Neural network logistic regression (single layer, SoftMax)
+
+These models will be trained through cross-validation with 5 K-Folds on both the full dataset (with an imbalanced label) and the down-sampled dataset (with a balanced label) to observe the effect imbalanced labels have on model performance. The neural network model will be trained similarly on both datasets for a maximum of 100 epochs. In addition, different gradient descent optimizers will also be explored at a learning rate of 0.001 such as Stochastic Gradient Descent (SGD), Adam, and Adagrad.
