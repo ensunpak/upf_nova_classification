@@ -30,8 +30,8 @@ In this project, the large 8GB dataset was processed in batches by first splitti
 A few classification models were developed in this model – logistic regression with LBFGS, decision tree, random forest, XGBoost, and logistic regression with a single-layer neural network. Out of all the models considered <indicate best model here> performed the best with an average accuracy of <insert accuracy score here>, while the logistic regression model with LBFGS performed the worst.
 
 Challenges in the project:
-1.	Labels in the dataset are imbalanced. Random down-sampling had to be implemented
-2.	The dataset was large (8GB), and workarounds in the hardware used in this project had to be implemented
+1.	Labels in the dataset are imbalanced - random down-sampling had to be implemented
+2.	The dataset was large (8GB) - workarounds in the hardware used (MacBook Pro with 8GB RAM) in this project had to be implemented
 3.	Key feature: additives_tags – has a large dimension of 514. Successfully reduced to 120 by applying PCA with an explained variation of  >= 95%
 4.	Key feature: ingredients_tags – has a large dimension of 356,210. Unable to reduce dimension due to hardware limitation, the need to switch to nutrition information as a proxy for NOVA group classification.
 
@@ -178,5 +178,10 @@ The project also contrasted the impact of training a model on a dataset with an 
 
 ## 7. Future consideration
 Some areas of the project can be considered for future improvements such as:
-1. Processing large datasets - Distributed framework such as Spark could be used to process large datasets. Kafka could also be implemented to stream the data and process it on the fly.
+1. Processing large datasets - Distributed data framework such as Spark could be used to process large datasets. Kafka could also be implemented to stream the data and process it on the fly.
 2. Feature importance - Determine which features contribute to the predictive power of each model using SHAP. As PCA was also used to reduce some feature dimensions, it is also worthwhile exploring how to apply feature importance techniques to the reduced feature dimensions.
+
+## 8. References
+1.	https://www.npr.org/sections/health-shots/2023/05/25/1178163270/ultra-processed-foods-health-risk-weight-gain#:~:text=%22Too%20much%20of%20it%20leads,it%20just%20went%20too%20far.%22
+2.	Monteiro CA, Cannon G, Levy RB et al. NOVA. The star shines bright. [Food classification. Public health] World Nutrition January-March 2016, 7, 1-3, 28-38
+3.	https://www.iarc.who.int/wp-content/uploads/2021/09/IARC_Evidence_Summary_Brief_2.pdf
