@@ -141,6 +141,8 @@ The models were trained and the 5-fold cross-validated accuracy metric of their 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_model_performance_cv_avg_full.png" width="550">
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_model_performance_cv_avg_downsample.png" width="550">
 
+Here, the set of models trained on both datasets had the same performance levels. The logistic regression model performed the worst among the models selected, and the random forest classifier was the best performer.
+
 Single layer neural network: neurons = 4; layer activation = SoftMax; epochs = 100; optimizer learning rate = 0.001; momentum = 0.005 (for SGD)
 | Optimizer | Train accuracy (Full dataset | Validation accuracy (Full dataset) | Train accuracy (Down sample dataset) | Validation accuracy (Down sample dataset) | 
 | ------------ | :--------------: | :----------------------: | :----------------------------: | :---------------------------------: |
@@ -156,3 +158,13 @@ Model Performance - SGD optimizer (full dataset)
 Model Performance - Adam optimizer (full dataset)
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_adam_full.png" width="800">
+
+Model Performance - Adagrad optimizer (full dataset)
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_adagrad_full.png" width="800">
+
+Model Performance - Adagrad optimizer (full dataset, with L2 regularization)
+
+<img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_adagrad_l2_full.png" width="800">
+
+Between the four neural network models, the model without any regularization with Adagrad optimizer gave the best result, the train and test loss and accuracy across the training epochs were stable
