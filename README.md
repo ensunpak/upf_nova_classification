@@ -14,7 +14,7 @@ _Notebooks_<br>
 ![](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 ![](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
-## 1.Background
+## 1. Background
 In the modern day of food production, increasingly food products have been ultra-processed, and research has shown that consumption of these types of foods in large quantities is linked to health risks such as obesity, type two diabetes, heart disease, and cancer[1]. A food product is typically considered ultra-processed if it contains ingredients from foods that are processed, then reassembled to create shelf-stable, tasty, and convenient meals[1]. Easy access to such food products with typically lower cost barriers makes the health risk more prevalent in the community.
 
 There is a food classification system called NOVA that was established by a team of nutritionists from the School of Public Health, University of São Paulo, Brazil led by Monteiro and Cannon2. It aims to classify food products into four distinct groups from unprocessed to ultra-processed depending on the type of food ingredients used. Details about the NOVA food grouping can be found in this [resource](https://www.fao.org/3/ca5644en/ca5644en.pdf).
