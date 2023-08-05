@@ -21,7 +21,7 @@ There is a food classification system called NOVA that was established by a team
 
 Besides the NOVA food classification system, another food classification system called Nutri-Score aims to classify a food product into five buckets of nutritional quality by its nutritional composition[3].
 
-## 2. Data science use case
+## 2. Data science application
 The classification of a food product into NOVA groups is not straightforward. The application of using machine learning algorithms to predict the classification of a food product into a NOVA category based on nutritional value and Nutri-Score category based on training data is explored in this project. In this project, available information from the dataset such as Nutri-Score score and grade, food additives, and nutrition content of the food product is used as the features for predicting the NOVA group of a food product.
 
 ## 3. Summary
@@ -90,10 +90,10 @@ The reduced dataset with the top 15 countries exhibited an imbalance in the labe
 
 | NOVA Group | Records | Records (%) |
 | ---------- | ------- | ----------- |
-| 1          | 59,233  | 10%         |
-| 2          | 22,187  | 10%         |
-| 3          | 116,627 | 10%         |
-| 4          | 316,684 | 10%         |
+| 1          | 59,233  | 11.5%       |
+| 2          | 22,187  | 4.3%        |
+| 3          | 116,627 | 22.7%       |
+| 4          | 316,684 | 61.5%       |
 
 The population in NOVA Groups 1, 3, and 4 will be randomly down-sampled close to NOVA Group 2 at 22,000 samples. The sampling was performed without any replacement.
 
