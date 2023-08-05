@@ -167,4 +167,4 @@ Model Performance - Adagrad optimizer (full dataset, with L2 regularization)
 
 <img src="https://github.com/ensunpak/upf_nova_classification/blob/main/img/chart_nn_adagrad_l2_full.png" width="800">
 
-Between the four neural network models, the model without any regularization with Adagrad optimizer gave the best result, the train and test loss and accuracy across the training epochs were stable
+Between the four neural network models, different optimizers implemented will yield different outcomes based on the current dataset and task on hand. In this project, the model without any regularization with Adagrad optimizer gave the best result, the train and test loss and accuracy across the training epochs were stable. Overall, the accuracy performance of the neural network models were not as good as the random forest classifier. The random forest classifier will be selected in this project over the neural network models due to the random forest model's better accuracy and simplicity to develop.
